@@ -784,6 +784,7 @@ GameObject:
   - component: {fileID: 1419807644}
   - component: {fileID: 1419807649}
   - component: {fileID: 1419807648}
+  - component: {fileID: 1419807650}
   m_Layer: 0
   m_Name: AlarmZone
   m_TagString: Untagged
@@ -881,7 +882,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7b88f14b45ebc48b74a2db5e818605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audio: {fileID: 0}
 --- !u!82 &1419807649
 AudioSource:
   m_ObjectHideFlags: 0
@@ -892,7 +892,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3c83c9ae9c8ae7b46bbe1ae734f640ad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d29ef88e6fac4a842813cc1c9efad85a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -978,6 +978,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1419807650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419807643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45a995bc532fbc4fba5778f9fd3192b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audio: {fileID: 0}
 --- !u!1 &1432285111
 GameObject:
   m_ObjectHideFlags: 0
