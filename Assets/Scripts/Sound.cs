@@ -1,8 +1,9 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class ControlSound : MonoBehaviour
+public class Sound : MonoBehaviour
 {
     [SerializeField] private AudioSource _audio;
     [SerializeField] private float _secondsWaiting = 0.5f;
@@ -12,10 +13,12 @@ public class ControlSound : MonoBehaviour
     private float _recoveryRate = 0.1f;
 
     private Coroutine _coroutine;
+    private WaitForSeconds _waitForSeconds;
 
     private void Start()
     {
         _audio = GetComponent<AudioSource>();
+        _waitForSeconds = new WaitForSeconds(_secondsWaiting);
     }
 
     public void IncreaseVolume()
@@ -26,7 +29,7 @@ public class ControlSound : MonoBehaviour
     public void DecreaseVolume()
     {
         StartChangeSoundVolume(_minSoundVolume);
-    }  
+    }
 
     private void StartChangeSoundVolume(float necessitySoundVolume)
     {
@@ -42,7 +45,7 @@ public class ControlSound : MonoBehaviour
         {
             _audio.volume = Mathf.MoveTowards(_audio.volume, necessitySoundVolume, _recoveryRate);
 
-            yield return new WaitForSeconds(_secondsWaiting);
+            yield return _waitForSeconds;
         }
     }
 }

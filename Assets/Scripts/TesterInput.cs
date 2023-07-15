@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlTester : MonoBehaviour
+public class TesterInput : MonoBehaviour
 {
     [SerializeField] private Movment _movment;
 
@@ -11,10 +13,10 @@ public class ControlTester : MonoBehaviour
     {
         _horizontal = Input.GetAxis("Horizontal");
         _vertical = Input.GetAxis("Vertical");
-       
-        float mouseX = Input.GetAxis("Mouse X");        
 
-        _movment.Rotation(mouseX);
+        float mouseX = Input.GetAxis("Mouse X");
+
+        _movment.Rotate(mouseX);
     }
 
     private void FixedUpdate()

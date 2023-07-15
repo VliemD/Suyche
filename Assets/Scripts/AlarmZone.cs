@@ -1,24 +1,24 @@
 using UnityEngine;
 
-[RequireComponent(typeof(ControlSound))]
+[RequireComponent(typeof(Sound))]
 public class AlarmZone: MonoBehaviour
 {
-    private ControlSound _sound;
+    private Sound _sound;
 
     private void Start()
     {
-        _sound = GetComponent<ControlSound>();
+        _sound = GetComponent<Sound>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<ControlTester>())
+        if (other.GetComponent<TesterInput>())
             _sound.IncreaseVolume();        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<ControlTester>())
+        if (other.GetComponent<TesterInput>())
             _sound.DecreaseVolume();        
     }    
 }
