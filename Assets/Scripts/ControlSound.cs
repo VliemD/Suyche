@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -13,7 +11,12 @@ public class ControlSound : MonoBehaviour
     private float _minSoundVolume = 0f;
     private float _recoveryRate = 0.1f;
 
-    private Coroutine _coroutine;     
+    private Coroutine _coroutine;
+
+    private void Start()
+    {
+        _audio = GetComponent<AudioSource>();
+    }
 
     public void IncreaseVolume()
     {
@@ -23,23 +26,14 @@ public class ControlSound : MonoBehaviour
     public void DecreaseVolume()
     {
         StartChangeSoundVolume(_minSoundVolume);
-    }    
-
-    private void Start()
-    {
-        _audio = GetComponent<AudioSource>();
-    }
+    }  
 
     private void StartChangeSoundVolume(float necessitySoundVolume)
-    {        
-        StopRunningCoroutine();
-        _coroutine = StartCoroutine(ChangeSoundVolume(necessitySoundVolume));
-    }
-
-    private void StopRunningCoroutine()
     {
-        if ( _coroutine != null)
+        if (_coroutine != null)
             StopCoroutine(_coroutine);
+
+        _coroutine = StartCoroutine(ChangeSoundVolume(necessitySoundVolume));
     }
 
     private IEnumerator ChangeSoundVolume(float necessitySoundVolume)
