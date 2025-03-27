@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 687110934}
   - component: {fileID: 687110933}
   m_Layer: 0
-  m_Name: RedZone
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,9 +604,9 @@ GameObject:
   - component: {fileID: 1133043106}
   - component: {fileID: 1133043105}
   - component: {fileID: 1133043104}
-  - component: {fileID: 1133043109}
-  - component: {fileID: 1133043108}
   - component: {fileID: 1133043110}
+  - component: {fileID: 1133043112}
+  - component: {fileID: 1133043111}
   m_Layer: 0
   m_Name: Tester
   m_TagString: Untagged
@@ -693,32 +693,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1133043108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133043103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 607072eb0ef9123438ba693640acd9cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speedRotation: 2
---- !u!114 &1133043109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133043103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b645971599ae544b99a6ad7d2159831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _movment: {fileID: 1133043108}
 --- !u!54 &1133043110
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -735,6 +709,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &1133043111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133043103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607072eb0ef9123438ba693640acd9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedRotation: 2
+--- !u!114 &1133043112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133043103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5526c84317a36634688e7ecc948bc3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movment: {fileID: 1133043111}
 --- !u!1 &1168410997
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,10 +987,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1419807643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a45a995bc532fbc4fba5778f9fd3192b, type: 3}
+  m_Script: {fileID: 11500000, guid: a3c507c31e3e2344c96a7fc70c3c40ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _audio: {fileID: 0}
+  _secondsWaiting: 0.5
 --- !u!1 &1432285111
 GameObject:
   m_ObjectHideFlags: 0
